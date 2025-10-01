@@ -1,0 +1,222 @@
+:root {
+    --primary-color: #0d1b2a;
+    --secondary-color: #1b263b;
+    --accent-color: #415a77;
+    --highlight-color: #00aaff;
+    --text-color: #e0e1dd;
+    --font-family: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: var(--secondary-color);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--highlight-color);
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header nav a:hover {
+    background-color: var(--highlight-color);
+    color: var(--primary-color);
+}
+
+main {
+    padding-top: 80px; /* Altura do header */
+}
+
+#hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    background: linear-gradient(rgba(13, 27, 42, 0.8), rgba(13, 27, 42, 1)), url('https://images.unsplash.com/photo-1519791817042-4b36f1ac34b9?q=80&w=2070&auto=format&fit=crop') no-repeat center center/cover;
+}
+
+.hero-text h2 {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--highlight-color);
+    margin: 10px 0;
+    min-height: 80px;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: var(--highlight-color);
+    color: var(--primary-color);
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 170, 255, 0.4);
+}
+
+.content-section {
+    padding: 80px 0;
+    border-bottom: 1px solid var(--accent-color);
+}
+
+.content-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+    color: var(--highlight-color);
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: var(--secondary-color);
+    padding: 30px;
+    border-radius: 10px;
+    width: calc(33.333% - 20px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h3 {
+    color: var(--highlight-color);
+    margin-bottom: 15px;
+}
+
+#aplicacoes ul {
+    list-style: none;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#aplicacoes li {
+    background-color: var(--secondary-color);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-left: 4px solid var(--highlight-color);
+}
+
+#aplicacoes li span {
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+footer {
+    background-color: var(--secondary-color);
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+    
+    .cards-container {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    header nav {
+        display: none; /* Simplificando para protótipo - pode ser melhorado com um menu hamburguer */
+    }
+}
+/* ... (todo o CSS anterior) ... */
+
+/* ADICIONAR ESTAS REGRAS ABAIXO */
+
+/* Estilo para link ativo no menu */
+header nav a.active {
+    color: var(--highlight-color);
+    font-weight: 700;
+}
+
+/* Espaçamento para o conteúdo das páginas internas */
+.page-content {
+    padding-top: 120px; /* Aumenta o espaço do topo */
+    padding-bottom: 60px;
+}
+
+.logo-link {
+    text-decoration: none;
+}
